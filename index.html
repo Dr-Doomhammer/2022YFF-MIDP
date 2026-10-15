@@ -1,0 +1,306 @@
+<!doctype html>
+<html lang="zh-CN" data-theme="light">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="微生物信息数据平台：项目简介、物种信息、监测方法、数据平台与联系我们。">
+  <meta name="color-scheme" content="light dark">
+  <title>微生物信息数据平台</title>
+  <link rel="icon" href="assets/CathayaStamp.jpg" type="image/jpeg">
+  <script>
+    try {
+      const theme = localStorage.getItem('microbe-theme');
+      if (theme === 'light' || theme === 'dark') document.documentElement.dataset.theme = theme;
+    } catch (_) {}
+  </script>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="assets/vendor/leaflet/leaflet.css">
+  <script src="app.js" defer></script>
+  <script src="assets/vendor/leaflet/leaflet.js" defer></script>
+  <script src="data-platform-config.js" defer></script>
+  <script src="assets/community-data.js" defer></script>
+  <script src="community-charts.js" defer></script>
+  <script src="data-platform.js" defer></script>
+  <script src="methods-gallery.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">跳转到主要内容</a>
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand" href="#top" aria-label="微生物信息数据平台首页">
+        <img src="assets/CathayaStamp.jpg" alt="银杉球果" width="43" height="60">
+        <span class="brand-text"><span>代表性珍稀濒危植物的保育和种群恢复技术</span><strong>微生物信息数据平台</strong></span>
+      </a>
+      <nav id="primary-nav" class="primary-nav" aria-label="主导航">
+        <a href="#about">项目简介</a>
+        <a href="#species">物种信息</a>
+        <a href="#methods">监测方法</a>
+        <a href="#data">数据平台</a>
+        <a href="#contact">联系我们</a>
+      </nav>
+      <div class="header-actions">
+        <button id="theme-toggle" class="icon-button" type="button" aria-label="切换到浅色主题" title="切换到浅色主题">
+          <svg class="moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M15.4 3.2A8.8 8.8 0 1 1 5.2 17.4 8.2 8.2 0 0 0 15.4 3.2Z" fill="currentColor"/></svg>
+          <svg class="sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M2 12h2m16 0h2M5 5l1.5 1.5m11 11L19 19M5 19l1.5-1.5m11-11L19 5"/></svg>
+        </button>
+        <button id="menu-toggle" class="icon-button menu-toggle" type="button" aria-label="打开导航菜单" aria-expanded="false" aria-controls="primary-nav"><span></span><span></span><span></span></button>
+      </div>
+    </div>
+  </header>
+  <main id="main">
+    <div id="top" class="page-opening">
+      <h1>微生物信息数据平台</h1>
+      <div class="title-rule" aria-hidden="true"></div>
+    </div>
+    <!-- 各板块内容将逐一完善。 -->
+    <section id="about" class="content-section" aria-labelledby="about-title">
+      <h2 id="about-title"><span class="section-number" aria-hidden="true">01</span>项目简介</h2>
+      <div class="project-content">
+        <h3 class="project-title">代表性珍稀濒危植物的保育和种群恢复技术</h3>
+        <figure class="project-figure">
+          <img src="assets/Project.jpg" alt="技术路线：以银杉、巧家五针松、银缕梅、云南金钱槭、暖地杓兰和辐花苣苔为目标物种，整合基因组学、进化生物学和生态学研究，研发遗传拯救、种群复壮、联网监测、同质园构建和产地溯源技术，揭示关键致危因子和适应潜力，实现核心种质资源保护和种群复壮。" width="898" height="621" loading="lazy">
+          <figcaption>技术路线</figcaption>
+        </figure>
+        <div class="project-description">
+          <p>我国亚热带及周边地区是北半球最重要的植物避难所，保存了大量特有和孑遗植物。由于环境变化和人类活动，很多植物面临灭绝威胁，其丧失将对生物多样性格局和生态系统功能产生重大影响。从适应性进化的角度看，遗传因素是导致植物濒危最本质的内因，气候变化和人类活动引起的生境改变是植物濒危的外因，但在当前全球气候变化情景下，生态因子和群落结构等的剧烈变化可能先于遗传因素导致物种濒危乃至灭绝。由于对植物濒危的遗传学和生态学机制及二者的相互作用缺乏系统研究，濒危植物保护及成效的提升面临一系列的理论和技术瓶颈，亟需整合进化生物学、基因组学、生态学等多学科方法，从分子到生态系统水平解析植物濒危的机制，揭示其适应潜力，创新就地和迁地保护技术。</p>
+          <p>针对珍稀濒危植物及小种群保育的基础理论和技术瓶颈，从群体基因组、群落系统发育多样性、生物互作、环境适应性等角度，对具有不同进化历史、生境和习性的代表性濒危植物开展研究，解析其濒危的遗传学和生态学机制，揭示关键致危因子，研发解濒的关键技术；建立“致濒机制研究-保育技术研发-种群恢复/复壮示范” 科技创新链，打造濒危植物保护新模式。</p>
+        </div>
+      </div>
+    </section>
+    <section id="species" class="content-section" aria-labelledby="species-title">
+      <h2 id="species-title"><span class="section-number" aria-hidden="true">02</span>物种信息</h2>
+      <div class="species-content">
+        <p class="species-introduction">选择银杉、巧家五针松、银缕梅、云南金钱槭、暖地杓兰和辐花苣苔6种分布于我国亚热带及周边地区极具代表性的濒危植物，研究其基因组多样性和变异模式、适应潜力、种群历史动态等，阐明其种群衰退的遗传学机制；评估濒危植物生境的原真性和完整性，解析群落系统发育多样性格局变化，阐明菌根真菌等关键微生物类群对濒危植物种群动态的影响，揭示植物濒危的生态学机制；开展基于生境重建和遗传拯救的种群复壮技术研发，建立濒危植物核心种质库、种群动态联网监测平台及保育与复壮示范基地。</p>
+        <div class="species-image-scroll" tabindex="0" role="region" aria-label="六种濒危植物关系图" aria-describedby="species-instructions">
+          <div class="species-diagram">
+            <img src="assets/SixSpecies.jpg" alt="六种濒危植物的照片、菌根类型与系统发育关系示意图。左侧物种名称可通过叠加按钮选择。" width="1096" height="629" loading="lazy">
+            <div class="species-hotspots" role="group" aria-label="选择物种">
+              <button type="button" class="species-hotspot" data-species="cathaya" aria-label="银杉" aria-pressed="true" aria-controls="species-detail" style="--hotspot-left: 1%; --hotspot-top: 76.5%; --hotspot-width: 10.5%;"><span class="visually-hidden">银杉</span></button>
+              <button type="button" class="species-hotspot" data-species="pinus" aria-label="巧家五针松" aria-pressed="false" aria-controls="species-detail" style="--hotspot-left: 24.5%; --hotspot-top: 48.5%; --hotspot-width: 10.5%;"><span class="visually-hidden">巧家五针松</span></button>
+              <button type="button" class="species-hotspot" data-species="parrotia" aria-label="银缕梅" aria-pressed="false" aria-controls="species-detail" style="--hotspot-left: 39.2%; --hotspot-top: 48.5%; --hotspot-width: 10%;"><span class="visually-hidden">银缕梅</span></button>
+              <button type="button" class="species-hotspot" data-species="dipteronia" aria-label="云南金钱槭" aria-pressed="false" aria-controls="species-detail" style="--hotspot-left: 9%; --hotspot-top: 48.5%; --hotspot-width: 10.5%;"><span class="visually-hidden">云南金钱槭</span></button>
+              <button type="button" class="species-hotspot" data-species="cypripedium" aria-label="暖地杓兰" aria-pressed="false" aria-controls="species-detail" style="--hotspot-left: 16.8%; --hotspot-top: 76%; --hotspot-width: 11%;"><span class="visually-hidden">暖地杓兰</span></button>
+              <button type="button" class="species-hotspot" data-species="oreochoris" aria-label="辐花苣苔" aria-pressed="false" aria-controls="species-detail" style="--hotspot-left: 32%; --hotspot-top: 73.5%; --hotspot-width: 11%;"><span class="visually-hidden">辐花苣苔</span></button>
+            </div>
+          </div>
+        </div>
+        <div class="species-toolbar">
+          <p id="species-instructions" class="species-instructions">点击图中左侧的物种名称，查看下方对应的物种介绍。<span class="species-mobile-hint">小屏幕可左右滑动查看完整图片。</span></p>
+          <div class="species-auto-controls">
+            <span id="species-auto-status">每30秒自动切换物种</span>
+            <button id="species-auto-toggle" type="button" aria-controls="species-detail">暂停自动切换</button>
+          </div>
+        </div>
+        <div id="species-detail" class="species-detail" role="region" aria-labelledby="species-detail-title" aria-live="polite" aria-atomic="true">
+          <h3 id="species-detail-title"><a id="species-detail-link" href="https://www.plantplus.cn/cn/sp/Cathaya%20argyrophylla?t=n" target="_blank" rel="noopener noreferrer">银杉</a></h3>
+          <div class="species-detail-layout">
+            <div id="species-detail-description" class="species-detail-description">
+<p>银杉，<a href="https://www.gov.cn/zhengce/2021-09/07/content_5727413.htm" target="_blank" rel="noopener noreferrer">国家一级保护野生植物</a>，松科银杉属的唯一现存物种。拉丁属名<i lang="la">Cathaya</i>与“华夏”同义，种名<i lang="la">argyrophylla</i>意为“银色的叶”，因其两条银白色的气孔带宽大耀目。</p>
+<p>银杉是古老的中生代孑遗植物，化石证据表明，在晚白垩世至更新世期间，银杉属曾在北半球广泛分布。经历了白垩纪—古近纪大灭绝、始新世—渐新世之交全球气候由“温室”到“冷室”的转换、第四纪冰期等重大事件，银杉在大部分分布区域相继灭绝。直到1938年，杨衔晋在现今的重庆金佛山考察采集树木标本，存活下来的银杉才第一次被发现。1955年到1956年间，钟济新在现今的花坪国家级自然保护区内采集到了银杉的标本，并在1958年由陈焕镛和匡可任发表。经郑万钧与傅立国的提议与再次考证，1962年，陈焕镛和匡可任将采自金佛山的银杉标本与花坪标本归为一种，将银杉这一物种正式发表。</p>
+<p>银杉的系统位置曾存在极大的争议，直到20世纪末分子系统学方法的引入才揭示出该属与松属和云杉属的近缘关系，后来谱系转录组分析进一步表明该属是松属的姐妹群。银杉属的起源时间介于早白垩世与中侏罗世，距今约1.4亿年前。同为中生代起源的松属现广泛分布于北半球，有110余种。而现存的野生银杉仅孤立地分布在我国大娄山、越城岭、八面山和大瑶山四个分布区、五大种群，且近40年间种群规模明显缩小，现存个体约为1810株（毛宗铮在1989年统计为3200余株）。</p>
+<p><strong>银杉是典型的外生菌根植物，通过将光合产物输送给共生的外生菌根真菌以获取氮、磷、水分等资源。银杉的原生境凋落物层厚、土壤浅薄，且有机质含量高、养分可获得性低，银杉可能依赖一些外生菌根真菌从有机质中为数不多的养分。现有研究认为，此类外生菌根真菌对植物宿主的碳需求高。而银杉的生长速度极慢，已有的解析木资料表明银杉平均年树高生长量仅为10.4厘米，故银杉难以与周围的乔木竞争，尤其是速生物种和一些阔叶物种。光竞争被广泛认为是银杉原生境中最为关键的限制因子。基于这些证据，我们推测竞争与光照可能是影响银杉与外生菌根真菌相互作用的关键因素，进而影响银杉的养分获取、生长、繁殖与种群扩散。在本项目中，我们使用激光雷达技术量化银杉个体受到的竞争及其光照获取能力，使用高通量测序技术剖析关键外生菌根真菌及土壤微生物群落，并结合银杉叶片、根系、凋落物、土壤理化性质、气候等指标测定，通过大数据分析及结构化统计分析证明了这一假设。论文已投稿至研究领域内的顶级期刊。</strong></p>
+<div class="species-references">
+<h4>参考文献</h4>
+<ol>
+<li>Wang, X. Q., Zou, Y. P., Zhang, D. M., Hong, D. Y. &amp; Liu, Z. Y. Genetic diversity analysis by RAPD in <i lang="la">Cathaya argyrophylla</i> Chun et Kuang. Science in China Series C: Life Sciences 40, 145–151, doi: <a href="https://doi.org/10.1007/BF02882042" target="_blank" rel="noopener noreferrer">10.1007/BF02882042</a> (1997).</li>
+<li>Ran, J. H., Shen, T. T., Wu, H., Gong, X. &amp; Wang, X. Q. Phylogeny and evolutionary history of Pinaceae updated by transcriptomic analysis. Molecular Phylogenetics and Evolution 129, 106–116, doi: <a href="https://doi.org/10.1016/j.ympev.2018.08.011" target="_blank" rel="noopener noreferrer">10.1016/j.ympev.2018.08.011</a> (2018).</li>
+<li>Sun, J. J., Xia, X. M., Wei, X. X. &amp; Wang, X. Q. Tracing the geographic origin of endangered plant species using transcriptome-derived SNPs: An example of <i lang="la">Cathaya argyrophylla</i>. Molecular Ecology Resources 23, 844–854, doi: <a href="https://doi.org/10.1111/1755-0998.13747" target="_blank" rel="noopener noreferrer">10.1111/1755-0998.13747</a> (2023).</li>
+<li>高雨轩，苏艳军，冯育才，张军，汪小全，刘玲莉.珍稀濒危孑遗植物银杉的研究与保护现状.植物生态学报49，1572–1582，doi: <a href="https://doi.org/10.17521/cjpe.2024.0476" target="_blank" rel="noopener noreferrer">10.17521/cjpe.2024.0476</a>（2025）。</li>
+</ol>
+</div>
+            </div>
+            <figure class="species-photo">
+              <img id="species-detail-photo" src="assets/银杉.JPG?v=1f1e792f59" alt="银杉照片" loading="lazy">
+              <figcaption id="species-photo-caption">银杉</figcaption>
+            </figure>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="methods" class="content-section" aria-labelledby="methods-title">
+      <h2 id="methods-title"><span class="section-number" aria-hidden="true">03</span>监测方法</h2>
+      <div class="methods-layout">
+        <div id="methods-description" class="methods-description">
+          <p>针对本项目包含的6种濒危植物（银杉、巧家五针松、银缕梅、云南金钱槭、暖地杓兰和辐花苣苔），使用高通量扩增子测序对这6种濒危植物的原生境土壤微生物群落（以真菌和细菌为主）进行剖析。其中，银杉样品由植物研究所高雨轩、莫冰棋等人采集，巧家五针松样品由昆明植物研究所舒恒、高雨轩、浙江大学张子睿等人采集，银缕梅样品由金寨郑学成提供，云南金钱槭样品由湖北大学黄岚杰等人采集，暖地杓兰样品由植物研究所金效华提供，辐花苣苔样品由植物研究所胡鸿森采集。</p>
+          <p>使用FastDNA SPIN Kit for Soil试剂盒从超低温保存的土壤中提取DNA。针对银杉、巧家五针松、银缕梅、云南金钱槭和辐花苣苔的土壤真菌群落，使用5.8S-Fun (5’-AACTTTYRRCAAYGGATCWCT-3’)和ITS4-Fun (5’-AGCCTCCGCTTATTGATATGCTTAART-3’)引物组合对ITS2区域进行PCR，针对暖地杓兰的土壤真菌群落，使用ITS3 (5’-GCATCGATGAAGAACGCAGC-3’)和 ITS4OF (5’-GTTACTAGGGGAATCCTTGTT-3’) 引物进行PCR。相比于普通引物组合（如5.8S-Fun/ITS4-Fun），ITS3/ITS4OF引物组合是针对兰科菌根真菌（尤其是胶膜菌科和角担菌科真菌）所设计的，可以更好的检测出土壤中的兰科菌根真菌。针对6种濒危植物的土壤细菌群落，使用被全球广泛使用的515F/806R引物组合对16S rRNA基因的V4片段进行PCR。PCR产物回收、纯化、建库后使用Illumina NovaSeq平台进行双端测序。</p>
+          <p>使用 <a href="https://pipecraft2-manual.readthedocs.io/en/latest/" target="_blank" rel="noopener noreferrer">PipeCraft 2</a> 对拆分样本后的双端 ITS 测序数据进行生物信息学分析。首先，利用 VSEARCH 合并双端序列，要求最小重叠长度为 20 bp。随后，使用 Cutadapt 去除引物序列，仅保留具有正确配对引物的序列。采用 VSEARCH 进行质量过滤，将最大预期错误数设为 1，并去除含有模糊碱基的序列。接着，使用 ITSxpress 提取真菌 ITS2 区域。利用 UCHIME 结合从头检测和基于参考数据库的检测两种模式，识别并去除潜在的嵌合体序列，其中参考数据库为 UNITE UCHIME（版本 16.10.2022）。使用 VSEARCH 将剩余序列按照 97% 的序列相似性阈值聚类为操作分类单元（OTUs），并去除仅包含一条序列的 OTU（singletons）。最后，利用 BLASTn 与 UNITE 数据库（版本 02.19.2025）进行序列比对和分类学注释，设置 E-value 阈值为 1 × 10<sup>−50</sup>，word size 为 9。</p>
+          <p>使用 <a href="https://qiime2.org/" target="_blank" rel="noopener noreferrer">QIIME 2</a> 对拆分样本后的双端 16S rRNA 基因测序数据进行生物信息学分析。首先，使用 Cutadapt 去除引物序列，并丢弃不含预期引物序列的测序 reads。随后，利用 DADA2 对剩余序列进行去噪、去冗余和嵌合体过滤，最终获得扩增子序列变体（Amplicon Sequence Variants，ASVs）。最后，使用 QIIME 2 中的 q2-feature-classifier 插件，基于针对 V4 区域训练的 SILVA Release 138.1 参考数据库，对质控后的 ASVs 进行分类学注释。</p>
+          <p>在本微生物信息数据平台中，我们将展示这6种濒危植物在每个采样点的真菌与细菌群落组成。</p>
+        </div>
+        <div id="methods-gallery" class="methods-gallery" role="region" aria-roledescription="轮播图" aria-label="监测方法现场照片">
+          <figure class="methods-slide">
+            <div id="methods-backdrop" class="methods-backdrop" aria-hidden="true"></div>
+            <img id="methods-photo" src="assets/金佛山国家级自然保护区（银杉）考察.JPG" alt="金佛山国家级自然保护区（银杉）考察" width="4032" height="3024" loading="lazy">
+            <figcaption class="methods-caption">
+              <span id="methods-photo-title">金佛山国家级自然保护区（银杉）考察</span>
+              <div id="methods-dots" class="methods-dots" role="group" aria-label="选择现场照片"></div>
+            </figcaption>
+          </figure>
+          <span id="methods-photo-count" class="methods-photo-count">1 / 9</span>
+          <button id="methods-auto-toggle" class="methods-auto-toggle" type="button" aria-controls="methods-photo" title="每5秒自动切换">暂停轮播</button>
+          <button id="methods-previous" class="methods-arrow methods-previous" type="button" aria-label="上一张照片">‹</button>
+          <button id="methods-next" class="methods-arrow methods-next" type="button" aria-label="下一张照片">›</button>
+          <p id="methods-gallery-error" class="methods-gallery-error" role="status" hidden></p>
+        </div>
+      </div>
+    </section>
+    <section id="data" class="content-section" aria-labelledby="data-title">
+      <h2 id="data-title"><span class="section-number" aria-hidden="true">04</span>数据平台</h2>
+      <div class="data-platform-content">
+        <div class="map-heading">
+          <div><h3>采样点分布</h3><p>在地图上选择采样点，查看物种、地名及微生物群落信息。</p></div>
+          <button id="map-reset" class="platform-button" type="button">重置视图</button>
+        </div>
+        <div class="sampling-map-frame">
+          <div id="sampling-map" role="region" aria-label="采样点高德卫星影像地图"></div>
+          <ul id="sample-legend" class="sample-legend" aria-label="采样点物种图例"></ul>
+        </div>
+        <div class="map-status-row">
+          <span id="map-status" role="status">影像加载中…</span>
+          <button id="map-retry" class="platform-button" type="button" hidden>重新加载影像</button>
+        </div>
+        <div class="community-panels">
+          <article class="community-panel" id="fungi-panel" aria-labelledby="fungi-title">
+            <div class="community-heading"><h3 id="fungi-title">真菌群落组成</h3><span class="community-point">尚未选择采样点</span></div>
+            <div class="community-controls">
+              <label for="fungi-rank">分类层级</label>
+              <select id="fungi-rank">
+                <option value="phylum">门（Phylum）</option><option value="class">纲（Class）</option><option value="order">目（Order）</option><option value="family">科（Family）</option><option value="genus">属（Genus）</option>
+              </select>
+              <button id="fungi-auto" class="platform-button" type="button" aria-controls="fungi-chart">暂停自动切换</button>
+            </div>
+            <p class="community-auto-status" id="fungi-auto-status">每15秒自动切换分类层级</p>
+            <div id="fungi-chart" class="community-placeholder" data-rank="phylum">
+              <span class="community-rank">门（Phylum）</span>
+              <p>请点击地图上的样点查看群落组成</p>
+            </div>
+          </article>
+          <article class="community-panel" id="bacteria-panel" aria-labelledby="bacteria-title">
+            <div class="community-heading"><h3 id="bacteria-title">细菌群落组成</h3><span class="community-point">尚未选择采样点</span></div>
+            <div class="community-controls">
+              <label for="bacteria-rank">分类层级</label>
+              <select id="bacteria-rank">
+                <option value="phylum">门（Phylum）</option><option value="class">纲（Class）</option><option value="order">目（Order）</option><option value="family">科（Family）</option><option value="genus">属（Genus）</option>
+              </select>
+              <button id="bacteria-auto" class="platform-button" type="button" aria-controls="bacteria-chart">暂停自动切换</button>
+            </div>
+            <p class="community-auto-status" id="bacteria-auto-status">每15秒自动切换分类层级</p>
+            <div id="bacteria-chart" class="community-placeholder" data-rank="phylum">
+              <span class="community-rank">门（Phylum）</span>
+              <p>请点击地图上的样点查看群落组成</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+    <section id="contact" class="content-section" aria-labelledby="contact-title">
+      <h2 id="contact-title"><span class="section-number" aria-hidden="true">05</span>联系我们</h2>
+      <div class="contact-content">
+        <dl class="contact-details">
+          <div><dt>单位</dt><dd><a href="http://www.ib.cas.cn/" target="_blank" rel="noopener noreferrer">中国科学院植物研究所</a></dd></div>
+          <div><dt>地址</dt><dd>北京市海淀区香山南辛村20号</dd></div>
+        </dl>
+        <h3 class="contact-subtitle">平台管理</h3>
+        <div class="maintainers">
+          <article class="maintainer" aria-labelledby="gao-name">
+            <h4 id="gao-name">高雨轩</h4>
+            <a class="contact-email" href="mailto:yuxuangao@ibcas.ac.cn">yuxuangao@ibcas.ac.cn</a>
+            <div class="profile-links">
+              <a href="https://orcid.org/0000-0002-8085-3016" target="_blank" rel="noopener noreferrer" aria-label="高雨轩 ORCID：0000-0002-8085-3016（新窗口打开）"><span class="profile-label">ORCID</span>0000-0002-8085-3016</a>
+              <a href="https://www.researchgate.net/profile/Yuxuan-Gao-3" target="_blank" rel="noopener noreferrer" aria-label="高雨轩 ResearchGate（新窗口打开）">ResearchGate <span aria-hidden="true">↗</span></a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+<template id="species-description-cathaya">
+<p>银杉，<a href="https://www.gov.cn/zhengce/2021-09/07/content_5727413.htm" target="_blank" rel="noopener noreferrer">国家一级保护野生植物</a>，松科银杉属的唯一现存物种。拉丁属名<i lang="la">Cathaya</i>与“华夏”同义，种名<i lang="la">argyrophylla</i>意为“银色的叶”，因其两条银白色的气孔带宽大耀目。</p>
+<p>银杉是古老的中生代孑遗植物，化石证据表明，在晚白垩世至更新世期间，银杉属曾在北半球广泛分布。经历了白垩纪—古近纪大灭绝、始新世—渐新世之交全球气候由“温室”到“冷室”的转换、第四纪冰期等重大事件，银杉在大部分分布区域相继灭绝。直到1938年，杨衔晋在现今的重庆金佛山考察采集树木标本，存活下来的银杉才第一次被发现。1955年到1956年间，钟济新在现今的花坪国家级自然保护区内采集到了银杉的标本，并在1958年由陈焕镛和匡可任发表。经郑万钧与傅立国的提议与再次考证，1962年，陈焕镛和匡可任将采自金佛山的银杉标本与花坪标本归为一种，将银杉这一物种正式发表。</p>
+<p>银杉的系统位置曾存在极大的争议，直到20世纪末分子系统学方法的引入才揭示出该属与松属和云杉属的近缘关系，后来谱系转录组分析进一步表明该属是松属的姐妹群。银杉属的起源时间介于早白垩世与中侏罗世，距今约1.4亿年前。同为中生代起源的松属现广泛分布于北半球，有110余种。而现存的野生银杉仅孤立地分布在我国大娄山、越城岭、八面山和大瑶山四个分布区、五大种群，且近40年间种群规模明显缩小，现存个体约为1810株（毛宗铮在1989年统计为3200余株）。</p>
+<p><strong>银杉是典型的外生菌根植物，通过将光合产物输送给共生的外生菌根真菌以获取氮、磷、水分等资源。银杉的原生境凋落物层厚、土壤浅薄，且有机质含量高、养分可获得性低，银杉可能依赖一些外生菌根真菌从有机质中为数不多的养分。现有研究认为，此类外生菌根真菌对植物宿主的碳需求高。而银杉的生长速度极慢，已有的解析木资料表明银杉平均年树高生长量仅为10.4厘米，故银杉难以与周围的乔木竞争，尤其是速生物种和一些阔叶物种。光竞争被广泛认为是银杉原生境中最为关键的限制因子。基于这些证据，我们推测竞争与光照可能是影响银杉与外生菌根真菌相互作用的关键因素，进而影响银杉的养分获取、生长、繁殖与种群扩散。在本项目中，我们使用激光雷达技术量化银杉个体受到的竞争及其光照获取能力，使用高通量测序技术剖析关键外生菌根真菌及土壤微生物群落，并结合银杉叶片、根系、凋落物、土壤理化性质、气候等指标测定，通过大数据分析及结构化统计分析证明了这一假设。论文已投稿至研究领域内的顶级期刊。</strong></p>
+<div class="species-references">
+<h4>参考文献</h4>
+<ol>
+<li>Wang, X. Q., Zou, Y. P., Zhang, D. M., Hong, D. Y. &amp; Liu, Z. Y. Genetic diversity analysis by RAPD in <i lang="la">Cathaya argyrophylla</i> Chun et Kuang. Science in China Series C: Life Sciences 40, 145–151, doi: <a href="https://doi.org/10.1007/BF02882042" target="_blank" rel="noopener noreferrer">10.1007/BF02882042</a> (1997).</li>
+<li>Ran, J. H., Shen, T. T., Wu, H., Gong, X. &amp; Wang, X. Q. Phylogeny and evolutionary history of Pinaceae updated by transcriptomic analysis. Molecular Phylogenetics and Evolution 129, 106–116, doi: <a href="https://doi.org/10.1016/j.ympev.2018.08.011" target="_blank" rel="noopener noreferrer">10.1016/j.ympev.2018.08.011</a> (2018).</li>
+<li>Sun, J. J., Xia, X. M., Wei, X. X. &amp; Wang, X. Q. Tracing the geographic origin of endangered plant species using transcriptome-derived SNPs: An example of <i lang="la">Cathaya argyrophylla</i>. Molecular Ecology Resources 23, 844–854, doi: <a href="https://doi.org/10.1111/1755-0998.13747" target="_blank" rel="noopener noreferrer">10.1111/1755-0998.13747</a> (2023).</li>
+<li>高雨轩，苏艳军，冯育才，张军，汪小全，刘玲莉.珍稀濒危孑遗植物银杉的研究与保护现状.植物生态学报49，1572–1582，doi: <a href="https://doi.org/10.17521/cjpe.2024.0476" target="_blank" rel="noopener noreferrer">10.17521/cjpe.2024.0476</a>（2025）。</li>
+</ol>
+</div>
+</template>
+<template id="species-description-pinus">
+<p>巧家五针松，又名五针白皮松，<a href="https://www.gov.cn/zhengce/2021-09/07/content_5727413.htm" target="_blank" rel="noopener noreferrer">国家一级保护野生植物</a>，<a href="https://www.iucnredlist.org/species/38283/2868298" target="_blank" rel="noopener noreferrer">IUCN极危（CR）植物</a>，是全球最濒危的100种物种之一。</p>
+<p>分子系统学分析表明，巧家五针松属于单维管束松亚属（Subgenus <i lang="la">Strobus</i>）下属五针松组（Section <i lang="la">Quinquefoliae</i>）的西藏白皮松亚组（Subsection <i lang="la">Gerardianae</i>），近缘物种为白皮松和西藏白皮松。</p>
+<p>巧家五针松只有1处野生分布点，现存野生植株35株，位于云南药山国家级自然保护区杨家湾片区，分布于云南省昭通市巧家县玉屏街道杨家湾村樟木箐（半阳坡）和中寨乡付山村徐家湾（半阴坡）同一山体相背的两个坡面上，其中樟木箐现存18株，徐家湾现存17株。现存巧家五针松野生植株平均胸径为22.5cm、平均株高为16.4m，结实25株。巧家五针松原生种群幼树数量仅占种群总数的14.3%（5株），未发现幼苗，种群结构为衰退型，种群自然更新能力较弱。其所在群落乔木上层仅有巧家五针松；乔木中层有3种植物，分别为巧家五针松、青冈、扇叶槭；乔木下层共有16种树种；而灌木层（36种）与草本层（33种）均未见巧家五针松幼苗。</p>
+<p>经过30多年保护，巧家五针松种群规模稳步增加，目前已累计实现人工繁育8000余株，保存幼苗幼树4000余株，其中巧家县境内移植存活3000余株，昆明、楚雄、大理等不同生境地共移植存活1000余株。</p>
+<p><strong>松属植物是典型的外生菌根植物，巧家五针松也不例外。本项目的初步分析表明，棉革菌属真菌（<i lang="la">Tomentella</i> spp.）是与巧家五针松共生的关键外生菌根真菌，且对于异地种群，巧家五针松与野生种群的核心真菌组的相似性越高，其表现出的叶片性状越倾向于具有更强的资源获取能力。</strong></p>
+<div class="species-references">
+<h4>参考文献</h4>
+<ol>
+<li>Zhang, Z. Y. Conservation Biology of an Extremely Endangered Pine, <i lang="la">Pinus squamata</i> X. W. Li (Pinaceae). PhD thesis. Kunming Institute of Botany, CAS. CSTR: <a href="https://www.cstr.cn/33151.37.01.33151.20030003" target="_blank" rel="noopener noreferrer">33151.37.01.33151.20030003</a> (2003).</li>
+<li>Shu, H. Population structure and conservation effectiveness of <i lang="la">Pinus squamata</i> Xiang W. Li. Master's thesis. Kunming Institute of Botany, CAS. CSTR: <a href="https://www.cstr.cn/35001.37.02.33151.20240026" target="_blank" rel="noopener noreferrer">35001.37.02.33151.20240026</a> (2024).</li>
+<li>张子睿，周静，胡艳萍，梁爽，马永鹏，陈伟乐.极度濒危植物巧家五针松的根内和根际真菌群落特征.植物生态学报49，1600–1611。doi: <a href="https://doi.org/10.17521/cjpe.2025.0021" target="_blank" rel="noopener noreferrer">10.17521/cjpe.2025.0021</a>（2025）.</li>
+<li>Gao, Y. et al. Potential roles of core soil microbiomes in supporting the conservation of rare and endangered plants. Plant and Soil 524, 1585–1600, doi: <a href="https://doi.org/10.1007/s11104-026-08740-z" target="_blank" rel="noopener noreferrer">10.1007/s11104-026-08740-z</a> (2026).</li>
+<li>Zhou, J. et al. Neighbor-referenced mycorrhizal diagnostics for endangered tree conservation. Plant Diversity, doi: <a href="https://doi.org/10.1016/j.pld.2026.06.007" target="_blank" rel="noopener noreferrer">10.1016/j.pld.2026.06.007</a> (2026).</li>
+</ol>
+</div>
+</template>
+<template id="species-description-parrotia">
+<p>银缕梅，<a href="https://www.gov.cn/zhengce/2021-09/07/content_5727413.htm" target="_blank" rel="noopener noreferrer">国家一级保护野生植物</a>，金缕梅科波斯铁木属下唯二物种（另一物种为波斯铁木）。</p>
+<p>综合前期研究与实地调查，本项目共记录银缕梅分布点20个，其分布范围局限于豫皖交界的大别山脉及皖浙苏交界的天目山脉、仙霞岭及浙江天台山脉，涉及河南、安徽、江苏、浙江四省。银缕梅种群均分布于海拔1,100 m以下，其中大部分种群生长于山地峡谷河沟两侧，少数种群位于山顶或山腰。遥感监测与实地调查共记录银缕梅野生个体3,920株，其中成年植株（DBH &gt; 5 cm）1,213株。按种群规模划分：小种群（&lt; 100株）7个，包括金寨杨家河、金寨长春村、绩溪朱显村、临安浙川村、余姚棠溪村、永康大寒尖、宜兴善卷洞风景区；中等种群（100–300）10个，包括商城五里山村、金寨花娘寨、金寨黄花沟、金寨大峡谷村、岳西天峡风景区、舒城万佛山自然保护区、舒城歧岭、旌德泥鳅坞、宁波商量岗林场、宜兴林场；大种群（&gt; 300株）3个，为岳西英山河（1,134株，成年植株230株）、绩溪水井湾山及安吉龙王山自然保护区。其中，岳西英山河种群规模最大，临安浙川村种群规模最小（4株，成年植株1株）。</p>
+<p>银缕梅为落叶乔木，花期3月下旬至4月上旬，雌雄异熟导致传粉窗口期较短，种子自然萌发率低。且作为喜光乔木，银缕梅在落叶乔木中竞争能力偏弱，而青冈等伴生常绿树种更具竞争优势。</p>
+<p>根据系统位置推测，银缕梅为丛枝菌根植物，可与丛枝菌根真菌共生进行提高从土壤中获取养分的能力。本项目对银缕梅原生境的土壤微生物群落进行了初步探索。</p>
+<div class="species-references">
+<h4>参考文献</h4>
+<ol>
+<li>Li, W. &amp; Zhang, G.-F. Population structure and spatial pattern of the endemic and endangered subtropical tree <i lang="la">Parrotia subaequalis</i> (Hamamelidaceae). Flora - Morphology, Distribution, Functional Ecology of Plants 212, 10–18, doi: <a href="https://doi.org/10.1016/j.flora.2015.02.002" target="_blank" rel="noopener noreferrer">10.1016/j.flora.2015.02.002</a> (2015).</li>
+<li>赵翊硕，马雅真，王天瑞，周琦，凌峰，杨启池，李因刚，邱英雄.银缕梅种群遗传结构解析与迁地保护技术体系构建.生物多样性，34，26207。doi: <a href="https://doi.org/10.17520/biods2026207" target="_blank" rel="noopener noreferrer">10.17520/biods2026207</a>（2026）.</li>
+</ol>
+</div>
+</template>
+<template id="species-description-dipteronia">
+<p>云南金钱槭，<a href="https://www.gov.cn/zhengce/2021-09/07/content_5727413.htm" target="_blank" rel="noopener noreferrer">国家二级保护野生植物</a>，<a href="https://www.iucnredlist.org/species/32340/2815531" target="_blank" rel="noopener noreferrer">IUCN濒危（EN）植物</a>，无患子科金钱槭属下唯二植物（另一物种为金钱槭）。</p>
+<p>云南金钱槭是具有代表性的第三纪孑遗植物，现存野生个体主要分布云南文山州老君山自然保护区，生境为海拔1800–2300米山地溪流边常绿阔叶林林缘或次生阔叶林。现存7个点，成株约2150株，主要分布在文山市坝心乡高笕槽村（约400株）、文山市坝心乡陈家寨村（约1500株，CJZ）、文山市小街镇新马房村（约70株，XMF）、文山市小街镇菖蒲塘村（约100株，CPT）、蒙自市老寨乡老寨村（约65株，LZ）、屏边县和平镇白鸽村（约10株、BGC）和麻栗坡县马街乡董浪村（约5株、MLP）。</p>
+<p>云南金钱槭是典型的丛枝菌根植物，可与丛枝菌根真菌共生进行提高从土壤中获取养分的能力。本项目的初步研究发现云南金钱槭可能对丛枝菌根真菌的依赖性较低，丛枝菌根真菌应该不是限制云南金钱槭种群扩散的关键。</p>
+<div class="species-references">
+<h4>参考文献</h4>
+<ol>
+<li>Chen, C., Lu, R. S., Zhu, S. S., Tamaki, I. &amp; Qiu, Y. X. Population structure and historical demography of <i lang="la">Dipteronia dyeriana</i> (Sapindaceae), an extremely narrow palaeoendemic plant from China: implications for conservation in a biodiversity hot spot. Heredity (Edinb) 119, 95–106, doi: <a href="https://doi.org/10.1038/hdy.2017.19" target="_blank" rel="noopener noreferrer">10.1038/hdy.2017.19</a> (2017).</li>
+<li>Feng, Y., Comes, H. P., Zhou, X. P. &amp; Qiu, Y. X. Phylogenomics recovers monophyly and early Tertiary diversification of <i lang="la">Dipteronia</i> (Sapindaceae). Molecular Phylogenetics and Evolution 130, 9–17, doi: <a href="https://doi.org/10.1016/j.ympev.2018.09.012" target="_blank" rel="noopener noreferrer">10.1016/j.ympev.2018.09.012</a> (2019).</li>
+<li>Feng, Y. et al. Genome sequences and population genomics provide insights into the demographic history, inbreeding, and mutation load of two 'living fossil' tree species of <i lang="la">Dipteronia</i>. The Plant Journal 117, 177–192, doi: <a href="https://doi.org/10.1111/tpj.16486" target="_blank" rel="noopener noreferrer">10.1111/tpj.16486</a> (2024).</li>
+<li>Gao, Y. et al. Potential roles of core soil microbiomes in supporting the conservation of rare and endangered plants. Plant and Soil 524, 1585–1600, doi: <a href="https://doi.org/10.1007/s11104-026-08740-z" target="_blank" rel="noopener noreferrer">10.1007/s11104-026-08740-z</a> (2026).</li>
+</ol>
+</div>
+</template>
+<template id="species-description-cypripedium">
+<p>暖地杓兰，兰科杓兰属物种，为杓兰属中唯一的<a href="https://www.gov.cn/zhengce/2021-09/07/content_5727413.htm" target="_blank" rel="noopener noreferrer">国家一级保护野生植物</a>，<a href="https://www.iucnredlist.org/species/201848/2722593" target="_blank" rel="noopener noreferrer">IUCN濒危（EN）植物</a>。</p>
+<p>暖地杓兰是唯一分布在亚热带常绿阔叶林中杓兰属植物，因此其种名为<i lang="la">subtropicum</i>。暖地杓兰现存野生个体约300株，生境严重片段化，主要分布在我国墨脱、贡山、麻栗坡这3个区域。</p>
+<p>与大多数兰科植物一样，杓兰属植物也是兰科菌根植物，在种子萌发及幼苗生长阶段依赖与之共生的兰科菌根真菌。本项目的初步研究发现胶膜菌属真菌（<i lang="la">Tulasnella</i> spp.）与无孢蜡壳属真菌（<i lang="la">Serendipita</i> spp.）是暖地杓兰共生的兰科菌根真菌。在其他杓兰属植物研究中也发现胶膜菌属真菌是关键的兰科菌根真菌。值得注意的是，Hua等人（2026）关于暖地杓兰根际微生物的研究中认为胶膜菌并不重要，这可能是因为他们的研究中未使用针对兰科菌根真菌优化后的PCR引物，从而得出了错误的结论。</p>
+<p>此外，本项目使用单菌丝团分离法，对野生暖地杓兰根段进行菌根真菌分离。同时使用暖地杓兰成熟种子，在原生境进行萌发菌诱捕及分离。经菌株纯化及合并后，获得胶膜菌属及角担菌属等多种暖地杓兰共生真菌，并发现其中角担菌属真菌可促进暖地杓兰种子萌发，初步实现暖地杓兰的共生萌发。</p>
+<div class="species-references">
+<h4>参考文献</h4>
+<ol>
+<li>Li, J. H. et al. Molecular phylogeny of <i lang="la">Cypripedium</i> (Orchidaceae: Cypripedioideae) inferred from multiple nuclear and chloroplast regions. Molecular Phylogenetics and Evolution 61, 308–320, doi: <a href="https://doi.org/10.1016/j.ympev.2011.06.006" target="_blank" rel="noopener noreferrer">10.1016/j.ympev.2011.06.006</a> (2011).</li>
+<li>Qin, S. et al. Mitochondrial genome evolution in the orchid subfamily Cypripedioideae (Orchidaceae). Funct Integr Genomics 25, 96, doi: <a href="https://doi.org/10.1007/s10142-025-01596-z" target="_blank" rel="noopener noreferrer">10.1007/s10142-025-01596-z</a> (2025).</li>
+<li>Hua, M., Jiang, H., Yuan, R. &amp; Kong, J. Diversity and composition of root-associated fungal communities in critically small population of <i lang="la">Cypripedium subtropicum</i>. Frontiers in Plant Science 17, 1783975, doi: <a href="https://doi.org/10.3389/fpls.2026.1783975" target="_blank" rel="noopener noreferrer">10.3389/fpls.2026.1783975</a> (2026).</li>
+<li>Gao, Y. et al. Potential roles of core soil microbiomes in supporting the conservation of rare and endangered plants. Plant and Soil 524, 1585–1600, doi: <a href="https://doi.org/10.1007/s11104-026-08740-z" target="_blank" rel="noopener noreferrer">10.1007/s11104-026-08740-z</a> (2026).</li>
+</ol>
+</div>
+</template>
+<template id="species-description-oreochoris">
+<p>辐花苣苔，苦苣苔科马铃苣苔属物种，为苦苣苔科中唯一的<a href="https://www.gov.cn/zhengce/2021-09/07/content_5727413.htm" target="_blank" rel="noopener noreferrer">国家一级保护野生植物</a>。</p>
+<p>辐花苣苔是马铃苣苔属已知的唯一具有辐射对称花的物种，现存野生个体约5000株，分布区域非常狭窄，仅分布于贵州贞丰、安龙与兴仁交界的龙头大山州级自然保护区。</p>
+<p>本项目研究发现辐花苣苔在野外的结实率极低（约3%左右），花形转变是导致辐花苣苔传粉者访花频率降低，结实率降低，导致辐花苣苔野外居群更替速度变慢。此外，辐花苣苔花器官发育从原基起始就呈辐射对称状，与苦苣苔科其他类群完全不同。本项目也对辐花苣苔原生境的土壤微生物群落进行了初步探究。</p>
+<div class="species-references">
+<h4>参考文献</h4>
+<ol>
+<li>Chen, L. et al. Mitochondrial genome analysis of the endangered <i lang="la">Oreocharis esquirolii</i>: insights into evolutionary adaptation and conservation. BMC Plant Biol 25, 827, doi: <a href="https://doi.org/10.1186/s12870-025-06838-7" target="_blank" rel="noopener noreferrer">10.1186/s12870-025-06838-7</a> (2025).</li>
+<li>Peng, N., Yang, L., Shi, X., Kong, H. &amp; Kang, M. Genomic and population genomic analyses reveal contrasting diversity and demographic histories in a critically endangered and a widespread <i lang="la">Oreocharis</i> species. Plant Divers 47, 746–758, doi: <a href="https://doi.org/10.1016/j.pld.2025.06.006" target="_blank" rel="noopener noreferrer">10.1016/j.pld.2025.06.006</a> (2025).</li>
+</ol>
+</div>
+</template>
+  <footer><div class="footer-inner"><span>网站版本 V0.1</span><a href="#top">返回顶部 ↑</a><time id="footer-clock" aria-label="当前系统日期和时间"></time></div></footer>
+</body>
+</html>
