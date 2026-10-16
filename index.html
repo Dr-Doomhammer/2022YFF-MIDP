@@ -20,6 +20,8 @@
   <script src="data-platform-config.js" defer></script>
   <script src="assets/community-data.js" defer></script>
   <script src="community-charts.js" defer></script>
+  <script src="assets/networks/manifest.js" defer></script>
+  <script src="network-view.js" defer></script>
   <script src="data-platform.js" defer></script>
   <script src="methods-gallery.js" defer></script>
 </head>
@@ -191,6 +193,39 @@
             </div>
           </article>
         </div>
+        <article id="microbe-network" class="microbe-network" aria-labelledby="network-title">
+          <div class="network-heading">
+            <div><h3 id="network-title">可交互微生物共线性网络</h3><p id="network-site">请在地图上选择样点，查看所属物种的网络</p></div>
+            <span class="network-layout-label">ForceAtlas2</span>
+          </div>
+          <div class="network-stats" aria-label="网络统计">
+            <span>Nodes <strong id="network-nodes">—</strong></span>
+            <span>Links <strong id="network-links">—</strong></span>
+            <span><i class="network-key fungi-key"></i>真菌 <strong id="network-fungi">—</strong></span>
+            <span><i class="network-key bacteria-key"></i>细菌 <strong id="network-bacteria">—</strong></span>
+          </div>
+          <div class="network-workspace">
+            <div class="network-stage">
+              <div class="network-tools">
+                <button id="network-zoom-in" class="platform-button" type="button" aria-label="放大网络">＋</button>
+                <button id="network-zoom-out" class="platform-button" type="button" aria-label="缩小网络">－</button>
+                <button id="network-reset" class="platform-button" type="button">重置视图</button>
+                <button id="network-unlock" class="platform-button" type="button" hidden>取消锁定</button>
+              </div>
+              <canvas id="network-canvas" tabindex="0" aria-label="微生物关联网络，可拖动和缩放；右侧搜索框可通过分类名称或节点编号选择节点"></canvas>
+              <div id="network-status" class="network-status" role="status">请点击地图上的样点查看所属物种的网络</div>
+              <button id="network-retry" class="platform-button network-retry" type="button" hidden>重新加载网络</button>
+              <p class="network-help">悬停查看节点 · 点击锁定 · 拖动平移 · 滚轮缩放</p>
+            </div>
+            <aside class="network-sidebar" aria-label="节点分类与关联">
+              <label for="network-search">查找节点</label>
+              <input id="network-search" type="search" placeholder="节点编号或分类名称" disabled>
+              <div id="network-search-results" class="network-search-results"></div>
+              <div id="network-node-detail"><p class="network-empty">悬停网络节点，查看分类信息和关联节点。</p></div>
+            </aside>
+          </div>
+          <p class="network-method">按物种汇总样本，真菌、细菌分别计算相对丰度；出现率 ≥50%；不作对数转换；Spearman ρ &gt;0.6，BH校正 P &lt;0.05；已移除孤立节点。关联表示统计相关，不代表直接生物互作。</p>
+        </article>
       </div>
     </section>
     <section id="contact" class="content-section" aria-labelledby="contact-title">
