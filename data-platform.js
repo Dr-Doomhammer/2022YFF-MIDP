@@ -128,6 +128,7 @@
       markerById.get(point.id)?.openPopup();
     } else if (!point) map?.closePopup();
     for (const community of communities) { community.render(); community.schedule(); }
+    byId('microbe-network')?.dispatchEvent(new CustomEvent('samplechange', { detail: { sample: point } }));
   }
 
 
