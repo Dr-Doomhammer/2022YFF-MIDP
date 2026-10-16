@@ -32,7 +32,7 @@
     const svg = document.createElementNS(NS, 'svg');
     svg.setAttribute('viewBox', '0 0 320 320');
     svg.setAttribute('role', 'img');
-    svg.setAttribute('aria-label', `${group === 'fungi' ? '真菌' : '细菌'}群落饼图，可通过下方图例查看各分类相对丰度`);
+    svg.setAttribute('aria-label', `${group === 'amf' ? '丛枝菌根真菌' : group === 'fungi' ? '真菌' : '细菌'}群落饼图，可通过下方图例查看各分类相对丰度`);
     svg.classList.add('community-pie');
     const detail = document.createElement('div'); detail.className = 'community-tooltip';
     detail.setAttribute('role', 'status');

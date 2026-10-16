@@ -123,8 +123,8 @@
       <h2 id="methods-title"><span class="section-number" aria-hidden="true">03</span>监测方法</h2>
       <div class="methods-layout">
         <div id="methods-description" class="methods-description">
-          <p>针对本项目包含的6种濒危植物（银杉、巧家五针松、银缕梅、云南金钱槭、暖地杓兰和辐花苣苔），使用高通量扩增子测序对这6种濒危植物的原生境土壤微生物群落（以真菌和细菌为主）进行剖析。其中，银杉样品由植物研究所高雨轩、莫冰棋等人采集，巧家五针松样品由昆明植物研究所舒恒、高雨轩、浙江大学张子睿等人采集，银缕梅样品由金寨郑学成提供，云南金钱槭样品由湖北大学黄岚杰等人采集，暖地杓兰样品由植物研究所金效华提供，辐花苣苔样品由植物研究所胡鸿森采集。</p>
-          <p>使用FastDNA SPIN Kit for Soil试剂盒从超低温保存的土壤中提取DNA。针对银杉、巧家五针松、银缕梅、云南金钱槭和辐花苣苔的土壤真菌群落，使用5.8S-Fun (5’-AACTTTYRRCAAYGGATCWCT-3’)和ITS4-Fun (5’-AGCCTCCGCTTATTGATATGCTTAART-3’)引物组合对ITS2区域进行PCR，针对暖地杓兰的土壤真菌群落，使用ITS3 (5’-GCATCGATGAAGAACGCAGC-3’)和 ITS4OF (5’-GTTACTAGGGGAATCCTTGTT-3’) 引物进行PCR。相比于普通引物组合（如5.8S-Fun/ITS4-Fun），ITS3/ITS4OF引物组合是针对兰科菌根真菌（尤其是胶膜菌科和角担菌科真菌）所设计的，可以更好的检测出土壤中的兰科菌根真菌。针对6种濒危植物的土壤细菌群落，使用被全球广泛使用的515F/806R引物组合对16S rRNA基因的V4片段进行PCR。PCR产物回收、纯化、建库后使用Illumina NovaSeq平台进行双端测序。</p>
+          <p>针对本项目包含的6种濒危植物（银杉、巧家五针松、银缕梅、云南金钱槭、暖地杓兰和辐花苣苔），使用高通量扩增子测序对这6种濒危植物的原生境土壤微生物群落（以真菌和细菌为主）进行剖析。其中，银杉样品由植物研究所高雨轩、莫冰棋等人采集，巧家五针松样品由昆明植物研究所舒恒、高雨轩、浙江大学张子睿等人采集，银缕梅样品由浙江大学周静、金寨郑学成等人采集，云南金钱槭样品由湖北大学黄岚杰等人采集，暖地杓兰样品由植物研究所金效华提供，辐花苣苔样品由植物研究所胡鸿森采集。</p>
+          <p>使用FastDNA SPIN Kit for Soil试剂盒从超低温保存的样品中提取DNA。针对银杉、巧家五针松、银缕梅、云南金钱槭和辐花苣苔的土壤真菌群落，使用5.8S-Fun (5’-AACTTTYRRCAAYGGATCWCT-3’)和ITS4-Fun (5’-AGCCTCCGCTTATTGATATGCTTAART-3’)引物组合对ITS2区域进行PCR，针对暖地杓兰的土壤真菌群落，使用ITS3 (5’-GCATCGATGAAGAACGCAGC-3’)和 ITS4OF (5’-GTTACTAGGGGAATCCTTGTT-3’) 引物进行PCR。相比于普通引物组合（如5.8S-Fun/ITS4-Fun），ITS3/ITS4OF引物组合是针对兰科菌根真菌（尤其是胶膜菌科和角担菌科真菌）所设计的，可以更好的检测出土壤中的兰科菌根真菌。针对6种濒危植物的土壤细菌群落，使用被全球广泛使用的515F/806R引物组合对16S rRNA基因的V4片段进行PCR。对于银缕梅根系样品，我们对18S rRNA基因片段进行PCR并对丛枝菌根真菌进行分析。PCR产物回收、纯化、建库后使用Illumina NovaSeq平台进行双端测序。</p>
           <p>使用 <a href="https://pipecraft2-manual.readthedocs.io/en/latest/" target="_blank" rel="noopener noreferrer">PipeCraft 2</a> 对拆分样本后的双端 ITS 测序数据进行生物信息学分析。首先，利用 VSEARCH 合并双端序列，要求最小重叠长度为 20 bp。随后，使用 Cutadapt 去除引物序列，仅保留具有正确配对引物的序列。采用 VSEARCH 进行质量过滤，将最大预期错误数设为 1，并去除含有模糊碱基的序列。接着，使用 ITSxpress 提取真菌 ITS2 区域。利用 UCHIME 结合从头检测和基于参考数据库的检测两种模式，识别并去除潜在的嵌合体序列，其中参考数据库为 UNITE UCHIME（版本 16.10.2022）。使用 VSEARCH 将剩余序列按照 97% 的序列相似性阈值聚类为操作分类单元（OTUs），并去除仅包含一条序列的 OTU（singletons）。最后，利用 BLASTn 与 UNITE 数据库（版本 02.19.2025）进行序列比对和分类学注释，设置 E-value 阈值为 1 × 10<sup>−50</sup>，word size 为 9。</p>
           <p>使用 <a href="https://qiime2.org/" target="_blank" rel="noopener noreferrer">QIIME 2</a> 对拆分样本后的双端 16S rRNA 基因测序数据进行生物信息学分析。首先，使用 Cutadapt 去除引物序列，并丢弃不含预期引物序列的测序 reads。随后，利用 DADA2 对剩余序列进行去噪、去冗余和嵌合体过滤，最终获得扩增子序列变体（Amplicon Sequence Variants，ASVs）。最后，使用 QIIME 2 中的 q2-feature-classifier 插件，基于针对 V4 区域训练的 SILVA Release 138.1 参考数据库，对质控后的 ASVs 进行分类学注释。</p>
           <p>在本微生物信息数据平台中，我们将展示这6种濒危植物在每个采样点的真菌与细菌群落组成。</p>
@@ -195,8 +195,20 @@
         </div>
         <article id="microbe-network" class="microbe-network" aria-labelledby="network-title">
           <div class="network-heading">
-            <div><h3 id="network-title">可交互微生物共线性网络</h3><p id="network-site">请在地图上选择样点，查看所属物种的网络</p></div>
+            <div><h3 id="network-title">微生物生态网络(Microbial Ecological Network)</h3><p id="network-site">请选择物种查看网络</p></div>
             <span class="network-layout-label">ForceAtlas2</span>
+          </div>
+          <div class="network-species-control">
+            <label for="network-species">选择物种</label>
+            <select id="network-species">
+              <option value="">请选择物种</option>
+              <option value="cathaya">银杉</option>
+              <option value="pinus">巧家五针松</option>
+              <option value="parrotia">银缕梅</option>
+              <option value="dipteronia">云南金钱槭</option>
+              <option value="cypripedium">暖地杓兰</option>
+              <option value="oreochoris">辐花苣苔</option>
+            </select>
           </div>
           <div class="network-stats" aria-label="网络统计">
             <span>Nodes <strong id="network-nodes">—</strong></span>
@@ -213,7 +225,7 @@
                 <button id="network-unlock" class="platform-button" type="button" hidden>取消锁定</button>
               </div>
               <canvas id="network-canvas" tabindex="0" aria-label="微生物关联网络，可拖动和缩放；右侧搜索框可通过分类名称或节点编号选择节点"></canvas>
-              <div id="network-status" class="network-status" role="status">请点击地图上的样点查看所属物种的网络</div>
+              <div id="network-status" class="network-status" role="status">请选择上方的物种查看网络</div>
               <button id="network-retry" class="platform-button network-retry" type="button" hidden>重新加载网络</button>
               <p class="network-help">悬停查看节点 · 点击锁定 · 拖动平移 · 滚轮缩放</p>
             </div>
@@ -224,7 +236,6 @@
               <div id="network-node-detail"><p class="network-empty">悬停网络节点，查看分类信息和关联节点。</p></div>
             </aside>
           </div>
-          <p class="network-method">按物种汇总样本，真菌、细菌分别计算相对丰度；出现率 ≥50%；不作对数转换；Spearman ρ &gt;0.6，BH校正 P &lt;0.05；已移除孤立节点。关联表示统计相关，不代表直接生物互作。</p>
         </article>
       </div>
     </section>
@@ -286,7 +297,7 @@
 <p>银缕梅，<a href="https://www.gov.cn/zhengce/2021-09/07/content_5727413.htm" target="_blank" rel="noopener noreferrer">国家一级保护野生植物</a>，金缕梅科波斯铁木属下唯二物种（另一物种为波斯铁木）。</p>
 <p>综合前期研究与实地调查，本项目共记录银缕梅分布点20个，其分布范围局限于豫皖交界的大别山脉及皖浙苏交界的天目山脉、仙霞岭及浙江天台山脉，涉及河南、安徽、江苏、浙江四省。银缕梅种群均分布于海拔1,100 m以下，其中大部分种群生长于山地峡谷河沟两侧，少数种群位于山顶或山腰。遥感监测与实地调查共记录银缕梅野生个体3,920株，其中成年植株（DBH &gt; 5 cm）1,213株。按种群规模划分：小种群（&lt; 100株）7个，包括金寨杨家河、金寨长春村、绩溪朱显村、临安浙川村、余姚棠溪村、永康大寒尖、宜兴善卷洞风景区；中等种群（100–300）10个，包括商城五里山村、金寨花娘寨、金寨黄花沟、金寨大峡谷村、岳西天峡风景区、舒城万佛山自然保护区、舒城歧岭、旌德泥鳅坞、宁波商量岗林场、宜兴林场；大种群（&gt; 300株）3个，为岳西英山河（1,134株，成年植株230株）、绩溪水井湾山及安吉龙王山自然保护区。其中，岳西英山河种群规模最大，临安浙川村种群规模最小（4株，成年植株1株）。</p>
 <p>银缕梅为落叶乔木，花期3月下旬至4月上旬，雌雄异熟导致传粉窗口期较短，种子自然萌发率低。且作为喜光乔木，银缕梅在落叶乔木中竞争能力偏弱，而青冈等伴生常绿树种更具竞争优势。</p>
-<p>根据系统位置推测，银缕梅为丛枝菌根植物，可与丛枝菌根真菌共生进行提高从土壤中获取养分的能力。本项目对银缕梅原生境的土壤微生物群落进行了初步探索。</p>
+<p>根据系统位置推测，银缕梅为丛枝菌根植物，可与丛枝菌根真菌共生进行提高从土壤中获取养分的能力。本项目对银缕梅原生境的土壤微生物群落及银缕梅根系的丛枝菌根真菌进行了研究。</p>
 <div class="species-references">
 <h4>参考文献</h4>
 <ol>
@@ -306,6 +317,7 @@
 <li>Feng, Y., Comes, H. P., Zhou, X. P. &amp; Qiu, Y. X. Phylogenomics recovers monophyly and early Tertiary diversification of <i lang="la">Dipteronia</i> (Sapindaceae). Molecular Phylogenetics and Evolution 130, 9–17, doi: <a href="https://doi.org/10.1016/j.ympev.2018.09.012" target="_blank" rel="noopener noreferrer">10.1016/j.ympev.2018.09.012</a> (2019).</li>
 <li>Feng, Y. et al. Genome sequences and population genomics provide insights into the demographic history, inbreeding, and mutation load of two 'living fossil' tree species of <i lang="la">Dipteronia</i>. The Plant Journal 117, 177–192, doi: <a href="https://doi.org/10.1111/tpj.16486" target="_blank" rel="noopener noreferrer">10.1111/tpj.16486</a> (2024).</li>
 <li>Gao, Y. et al. Potential roles of core soil microbiomes in supporting the conservation of rare and endangered plants. Plant and Soil 524, 1585–1600, doi: <a href="https://doi.org/10.1007/s11104-026-08740-z" target="_blank" rel="noopener noreferrer">10.1007/s11104-026-08740-z</a> (2026).</li>
+<li>Zhou, J. et al. Neighbor-referenced mycorrhizal diagnostics for endangered tree conservation. Plant Diversity, doi: <a href="https://doi.org/10.1016/j.pld.2026.06.007" target="_blank" rel="noopener noreferrer">10.1016/j.pld.2026.06.007</a> (2026).</li>
 </ol>
 </div>
 </template>

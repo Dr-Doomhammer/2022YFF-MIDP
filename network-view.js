@@ -1,7 +1,7 @@
 (() => {
   'use strict';
   const get = id => document.getElementById(id);
-  const root = get('microbe-network'), canvas = get('network-canvas'), context = canvas.getContext('2d');
+  const speciesSelect = get('network-species'), canvas = get('network-canvas'), context = canvas.getContext('2d');
   const status = get('network-status'), search = get('network-search'), detail = get('network-node-detail');
   const cache = new Map();
   let graph = null, neighbors = [], sample = null, request = 0, controller;
@@ -159,8 +159,9 @@
   }
   function validate(data) {
     if(!Array.isArray(data.nodes)||!Array.isArray(data.edges))throw Error('无效网络数据');
+    const threshold=data.correlationThreshold ?? .6;
     data.nodes.forEach(node=>{if(!Number.isFinite(node.x)||!Number.isFinite(node.y)||!colors[node.group]||node.taxonomy?.length!==5)throw Error('无效节点');});
-    data.edges.forEach(([a,b,r,q])=>{if(!Number.isInteger(a)||!Number.isInteger(b)||a<0||b<0||a>=data.nodes.length||b>=data.nodes.length||a===b||!(r>.6&&r<=1&&q>=0&&q<.05))throw Error('无效关联');});
+    data.edges.forEach(([a,b,r,q])=>{if(!Number.isInteger(a)||!Number.isInteger(b)||a<0||b<0||a>=data.nodes.length||b>=data.nodes.length||a===b||!(r>threshold&&r<=1&&q>=0&&q<.05))throw Error('无效关联');});
     return data;
   }
   async function load(point) {
@@ -169,9 +170,9 @@
     graph=null;neighbors=[];clearSelection();stats(null);search.value='';search.disabled=true;
     get('network-search-results').replaceChildren();get('network-retry').hidden=true;
     scale=1;offsetX=offsetY=0;baseDirty=true;status.hidden=false;
-    get('network-site').textContent=point?`当前物种：${point.speciesName} · 汇总该物种全部样点的样本`:'请在地图上选择样点，查看所属物种的网络';
+    get('network-site').textContent=point?`当前物种：${point.speciesName}`:'请选择物种查看网络';
     const entry=window.MICROBE_NETWORKS?.[point?.species];
-    if(!point){status.textContent='请点击地图上的样点查看所属物种的网络';return;}
+    if(!point){status.textContent='请选择上方的物种查看网络';return;}
     if(!entry){status.textContent='该物种的网络结果暂不可用';return;}
     stats(entry);
     if(entry.status==='empty'){status.textContent='按当前阈值未检出显著正相关关联，无可展示网络。';return;}
@@ -194,7 +195,9 @@
     }
   }
   get('network-retry').addEventListener('click',()=>load(sample));
-  root.addEventListener('samplechange',event=>load(event.detail.sample));
+  speciesSelect.addEventListener('change',()=>load(speciesSelect.value ? {
+    species: speciesSelect.value, speciesName: speciesSelect.selectedOptions[0].textContent
+  } : null));
   new ResizeObserver(resize).observe(canvas);
   new MutationObserver(()=>{baseDirty=true;redraw();}).observe(document.documentElement,{attributes:true,attributeFilter:['data-theme']});
   resize();

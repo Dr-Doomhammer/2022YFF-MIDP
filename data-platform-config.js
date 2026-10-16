@@ -18,7 +18,11 @@ window.MICROBE_PLATFORM_CONFIG = {
       "collector": "胡鸿森",
       "longitude": 105.47841782945903,
       "latitude": 25.370443408366356,
-      "coordinateSystem": "GCJ-02"
+      "coordinateSystem": "GCJ-02",
+      "communityGroups": [
+        "fungi",
+        "bacteria"
+      ]
     },
     {
       "id": "cypripedium-MLP",
@@ -30,7 +34,11 @@ window.MICROBE_PLATFORM_CONFIG = {
       "collector": "金效华",
       "longitude": 104.18048385174838,
       "latitude": 23.170370320603038,
-      "coordinateSystem": "GCJ-02"
+      "coordinateSystem": "GCJ-02",
+      "communityGroups": [
+        "fungi",
+        "bacteria"
+      ]
     },
     {
       "id": "cypripedium-MT",
@@ -42,7 +50,11 @@ window.MICROBE_PLATFORM_CONFIG = {
       "collector": "金效华",
       "longitude": 95.18529982382863,
       "latitude": 29.120367353631075,
-      "coordinateSystem": "GCJ-02"
+      "coordinateSystem": "GCJ-02",
+      "communityGroups": [
+        "fungi",
+        "bacteria"
+      ]
     },
     {
       "id": "pinus-YS",
@@ -54,7 +66,11 @@ window.MICROBE_PLATFORM_CONFIG = {
       "collector": "高雨轩",
       "longitude": 103.01361317549244,
       "latitude": 26.864261162533964,
-      "coordinateSystem": "GCJ-02"
+      "coordinateSystem": "GCJ-02",
+      "communityGroups": [
+        "fungi",
+        "bacteria"
+      ]
     },
     {
       "id": "parrotia-JZ",
@@ -66,7 +82,11 @@ window.MICROBE_PLATFORM_CONFIG = {
       "collector": "郑学成",
       "longitude": 115.92060415464088,
       "latitude": 31.25606235259587,
-      "coordinateSystem": "GCJ-02"
+      "coordinateSystem": "GCJ-02",
+      "communityGroups": [
+        "fungi",
+        "bacteria"
+      ]
     },
     {
       "id": "cathaya-JPL",
@@ -78,7 +98,11 @@ window.MICROBE_PLATFORM_CONFIG = {
       "collector": "高雨轩",
       "longitude": 113.7261289496402,
       "latitude": 26.0499330802538,
-      "coordinateSystem": "GCJ-02"
+      "coordinateSystem": "GCJ-02",
+      "communityGroups": [
+        "fungi",
+        "bacteria"
+      ]
     },
     {
       "id": "cathaya-WZP",
@@ -90,7 +114,11 @@ window.MICROBE_PLATFORM_CONFIG = {
       "collector": "高雨轩",
       "longitude": 113.72719553223007,
       "latitude": 26.06278650108663,
-      "coordinateSystem": "GCJ-02"
+      "coordinateSystem": "GCJ-02",
+      "communityGroups": [
+        "fungi",
+        "bacteria"
+      ]
     },
     {
       "id": "cathaya-SD",
@@ -102,7 +130,11 @@ window.MICROBE_PLATFORM_CONFIG = {
       "collector": "高雨轩",
       "longitude": 107.55948007721166,
       "latitude": 29.173784409014964,
-      "coordinateSystem": "GCJ-02"
+      "coordinateSystem": "GCJ-02",
+      "communityGroups": [
+        "fungi",
+        "bacteria"
+      ]
     },
     {
       "id": "cathaya-XSJW",
@@ -114,7 +146,11 @@ window.MICROBE_PLATFORM_CONFIG = {
       "collector": "高雨轩",
       "longitude": 107.56966382310529,
       "latitude": 29.19005687599066,
-      "coordinateSystem": "GCJ-02"
+      "coordinateSystem": "GCJ-02",
+      "communityGroups": [
+        "fungi",
+        "bacteria"
+      ]
     },
     {
       "id": "cathaya-ZZY",
@@ -126,7 +162,11 @@ window.MICROBE_PLATFORM_CONFIG = {
       "collector": "高雨轩",
       "longitude": 107.59329358283786,
       "latitude": 29.130206771299747,
-      "coordinateSystem": "GCJ-02"
+      "coordinateSystem": "GCJ-02",
+      "communityGroups": [
+        "fungi",
+        "bacteria"
+      ]
     },
     {
       "id": "cathaya-4",
@@ -138,7 +178,11 @@ window.MICROBE_PLATFORM_CONFIG = {
       "collector": "高雨轩",
       "longitude": 110.25372689009252,
       "latitude": 24.161887924515437,
-      "coordinateSystem": "GCJ-02"
+      "coordinateSystem": "GCJ-02",
+      "communityGroups": [
+        "fungi",
+        "bacteria"
+      ]
     },
     {
       "id": "cathaya-5",
@@ -150,7 +194,11 @@ window.MICROBE_PLATFORM_CONFIG = {
       "collector": "高雨轩",
       "longitude": 110.2521317191208,
       "latitude": 24.16096837664302,
-      "coordinateSystem": "GCJ-02"
+      "coordinateSystem": "GCJ-02",
+      "communityGroups": [
+        "fungi",
+        "bacteria"
+      ]
     },
     {
       "id": "cathaya-XTW",
@@ -162,7 +210,11 @@ window.MICROBE_PLATFORM_CONFIG = {
       "collector": "高雨轩",
       "longitude": 109.92309880632146,
       "latitude": 25.597856376890896,
-      "coordinateSystem": "GCJ-02"
+      "coordinateSystem": "GCJ-02",
+      "communityGroups": [
+        "fungi",
+        "bacteria"
+      ]
     },
     {
       "id": "cathaya-YZT",
@@ -174,7 +226,11 @@ window.MICROBE_PLATFORM_CONFIG = {
       "collector": "高雨轩",
       "longitude": 109.92436987196297,
       "latitude": 25.59791934928641,
-      "coordinateSystem": "GCJ-02"
+      "coordinateSystem": "GCJ-02",
+      "communityGroups": [
+        "fungi",
+        "bacteria"
+      ]
     },
     {
       "id": "cathaya-LLD",
@@ -186,7 +242,11 @@ window.MICROBE_PLATFORM_CONFIG = {
       "collector": "高雨轩",
       "longitude": 107.07129190078736,
       "latitude": 28.90260735647654,
-      "coordinateSystem": "GCJ-02"
+      "coordinateSystem": "GCJ-02",
+      "communityGroups": [
+        "fungi",
+        "bacteria"
+      ]
     },
     {
       "id": "cathaya-ZCG",
@@ -198,7 +258,11 @@ window.MICROBE_PLATFORM_CONFIG = {
       "collector": "高雨轩",
       "longitude": 107.2005540123248,
       "latitude": 28.99560284596338,
-      "coordinateSystem": "GCJ-02"
+      "coordinateSystem": "GCJ-02",
+      "communityGroups": [
+        "fungi",
+        "bacteria"
+      ]
     },
     {
       "id": "cathaya-SHS",
@@ -210,7 +274,11 @@ window.MICROBE_PLATFORM_CONFIG = {
       "collector": "高雨轩",
       "longitude": 110.58486273820704,
       "latitude": 26.53792189443336,
-      "coordinateSystem": "GCJ-02"
+      "coordinateSystem": "GCJ-02",
+      "communityGroups": [
+        "fungi",
+        "bacteria"
+      ]
     },
     {
       "id": "dipteronia-CJZ",
@@ -222,7 +290,11 @@ window.MICROBE_PLATFORM_CONFIG = {
       "collector": "黄岚杰",
       "longitude": 103.96189762062293,
       "latitude": 23.347204746411542,
-      "coordinateSystem": "GCJ-02"
+      "coordinateSystem": "GCJ-02",
+      "communityGroups": [
+        "fungi",
+        "bacteria"
+      ]
     },
     {
       "id": "dipteronia-CPT",
@@ -234,7 +306,11 @@ window.MICROBE_PLATFORM_CONFIG = {
       "collector": "黄岚杰",
       "longitude": 103.92181879687554,
       "latitude": 23.317131892487264,
-      "coordinateSystem": "GCJ-02"
+      "coordinateSystem": "GCJ-02",
+      "communityGroups": [
+        "fungi",
+        "bacteria"
+      ]
     },
     {
       "id": "dipteronia-HTS",
@@ -246,7 +322,11 @@ window.MICROBE_PLATFORM_CONFIG = {
       "collector": "黄岚杰",
       "longitude": 103.96189860385742,
       "latitude": 23.37721052536436,
-      "coordinateSystem": "GCJ-02"
+      "coordinateSystem": "GCJ-02",
+      "communityGroups": [
+        "fungi",
+        "bacteria"
+      ]
     },
     {
       "id": "dipteronia-LZB",
@@ -258,7 +338,11 @@ window.MICROBE_PLATFORM_CONFIG = {
       "collector": "黄岚杰",
       "longitude": 103.80194490969254,
       "latitude": 23.367276260065942,
-      "coordinateSystem": "GCJ-02"
+      "coordinateSystem": "GCJ-02",
+      "communityGroups": [
+        "fungi",
+        "bacteria"
+      ]
     },
     {
       "id": "dipteronia-MLP",
@@ -270,7 +354,71 @@ window.MICROBE_PLATFORM_CONFIG = {
       "collector": "黄岚杰",
       "longitude": 105.07297101374033,
       "latitude": 23.42750508731211,
-      "coordinateSystem": "GCJ-02"
+      "coordinateSystem": "GCJ-02",
+      "communityGroups": [
+        "fungi",
+        "bacteria"
+      ]
+    },
+    {
+      "id": "parrotia-JX",
+      "name": "JX",
+      "species": "parrotia",
+      "speciesName": "银缕梅",
+      "scientificName": "Parrotia subaequalis",
+      "place": "安徽绩溪朱显村",
+      "collector": "周静",
+      "longitude": 118.89986181153817,
+      "latitude": 30.210339341515642,
+      "coordinateSystem": "GCJ-02",
+      "communityGroups": [
+        "amf"
+      ]
+    },
+    {
+      "id": "parrotia-LWS",
+      "name": "LWS",
+      "species": "parrotia",
+      "speciesName": "银缕梅",
+      "scientificName": "Parrotia subaequalis",
+      "place": "浙江安吉小鲵国家级自然保护区",
+      "collector": "周静",
+      "longitude": 119.41829373266354,
+      "latitude": 30.393735476319485,
+      "coordinateSystem": "GCJ-02",
+      "communityGroups": [
+        "amf"
+      ]
+    },
+    {
+      "id": "parrotia-SC",
+      "name": "SC",
+      "species": "parrotia",
+      "speciesName": "银缕梅",
+      "scientificName": "Parrotia subaequalis",
+      "place": "安徽万佛山国家级自然保护区",
+      "collector": "周静",
+      "longitude": 116.56791626041645,
+      "latitude": 31.077672279803334,
+      "coordinateSystem": "GCJ-02",
+      "communityGroups": [
+        "amf"
+      ]
+    },
+    {
+      "id": "parrotia-YY",
+      "name": "YY",
+      "species": "parrotia",
+      "speciesName": "银缕梅",
+      "scientificName": "Parrotia subaequalis",
+      "place": "浙江余姚棠溪村",
+      "collector": "周静",
+      "longitude": 121.05241811081578,
+      "latitude": 29.721658074513282,
+      "coordinateSystem": "GCJ-02",
+      "communityGroups": [
+        "amf"
+      ]
     }
   ]
 };

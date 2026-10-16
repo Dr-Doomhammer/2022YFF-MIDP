@@ -196,6 +196,9 @@ h2 { display: flex; align-items: center; gap: 16px; color: var(--green); font-si
 .network-heading h3 { margin: 0; color: var(--strong); font-size: 19px; font-weight: 500; }
 .network-heading p { margin: 8px 0 0; font-size: 12px; line-height: 1.8; color: var(--muted); }
 .network-layout-label { font-size: 12px; color: var(--green); white-space: nowrap; }
+.network-species-control { display: flex; flex-wrap: wrap; align-items: center; gap: 12px; margin-top: 18px; font-size: 13px; color: var(--muted); }
+#network-species { width: 240px; max-width: 100%; padding: 8px 10px; border: 1px solid var(--rule); border-radius: 4px; color: var(--text); background: var(--bg); font: inherit; }
+#network-species:focus-visible { outline: 2px solid var(--green); outline-offset: 2px; }
 .network-stats { display: flex; flex-wrap: wrap; gap: 14px 24px; padding: 18px 0; font-size: 13px; color: var(--muted); }
 .network-stats > span { display: inline-flex; align-items: center; gap: 7px; }
 .network-stats strong { color: var(--strong); font-weight: 500; font-variant-numeric: tabular-nums; }
@@ -227,7 +230,6 @@ h2 { display: flex; align-items: center; gap: 16px; color: var(--green); font-si
 .network-neighbor > span { display: block; color: var(--muted); font-size: 11px; }
 .network-neighbor p { margin: 6px 0; }
 .network-empty { color: var(--muted); margin-top: 20px; }
-.network-method { margin: 12px 0 0; font-size: 11px; color: var(--muted); line-height: 1.8; }
 @media (max-width: 800px) {
   .microbe-network { padding: 16px; }
   .network-workspace { grid-template-columns: minmax(0, 1fr); }

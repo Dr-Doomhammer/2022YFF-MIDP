@@ -70,6 +70,10 @@
     const chart = byId(`${group}-chart`);
     const state = { rank: 'phylum', running: true, timer: null, hovered: false, focused: false };
     function render() {
+      const amfOnly = Boolean(selectedSample?.communityGroups?.includes('amf'));
+      panel.hidden = group === 'bacteria' && amfOnly;
+      const dataGroup = group === 'fungi' && amfOnly ? 'amf' : group;
+      byId(`${group}-title`).textContent = dataGroup === 'amf' ? '丛枝菌根真菌群落组成' : group === 'fungi' ? '真菌群落组成' : '细菌群落组成';
       select.value = state.rank;
       chart.dataset.rank = state.rank;
       chart.dataset.sampleId = selectedSample?.id || '';
@@ -80,12 +84,12 @@
         ? '该采样点的群落组成数据待接入' : '采样点与群落组成数据待接入';
       // 饼图只使用预先计算的样点汇总数据。
       chart.dispatchEvent(new CustomEvent('communitychange', {
-        bubbles: true, detail: { group, rank: state.rank, sample: selectedSample },
+        bubbles: true, detail: { group: dataGroup, rank: state.rank, sample: selectedSample },
       }));
     }
     function schedule() {
       clearTimeout(state.timer);
-      if (!state.running || document.hidden || state.hovered || state.focused) return;
+      if (!state.running || panel.hidden || document.hidden || state.hovered || state.focused) return;
       state.timer = setTimeout(() => {
         const index = ranks.findIndex(rank => rank[0] === state.rank);
         state.rank = ranks[(index + 1) % ranks.length][0];
@@ -128,7 +132,6 @@
       markerById.get(point.id)?.openPopup();
     } else if (!point) map?.closePopup();
     for (const community of communities) { community.render(); community.schedule(); }
-    byId('microbe-network')?.dispatchEvent(new CustomEvent('samplechange', { detail: { sample: point } }));
   }
 
 
